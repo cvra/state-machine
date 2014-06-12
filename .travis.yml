@@ -3,8 +3,11 @@ compiler:
   - gcc
 
 before_install:
-    - sudo apt-get update -qq
-    - sudo apt-get install -qq cpputest
+    - git clone https://github.com/cpputest/cpputest ../cpputest
+    - cd ../cpputest
+    - ./configure
+    - make
+    - make install
 
 before_script:
     - mkdir build/

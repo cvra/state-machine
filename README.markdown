@@ -1,4 +1,6 @@
 # State machine module
+[![Build Status](https://travis-ci.org/cvra/state-machine.png)](https://travis-ci.org/cvra/state-machine)
+
 This modules provides helper function to implement Finite State Machines
 (http://en.wikipedia.org/wiki/Finite-state_machine) in C.
 The states are implemented as function pointers which scale much better than

@@ -4,10 +4,11 @@ compiler:
 
 before_install:
     - git clone https://github.com/cpputest/cpputest ../cpputest
-    - cd ../cpputest
+    - pushd ../cpputest
     - ./configure
     - make
-    - make install
+    - sudo make install
+    - popd
 
 before_script:
     - mkdir build/

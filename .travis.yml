@@ -1,6 +1,7 @@
-language: c
+language: cpp
 compiler:
-  - gcc
+    - gcc
+    - clang
 
 before_install:
     - git clone https://github.com/cpputest/cpputest ../cpputest

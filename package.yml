@@ -1,0 +1,8 @@
+depends:
+    - test-runner
+
+source:
+    - state_machine.c
+
+tests:
+    - tests/state_machine_test.cpp

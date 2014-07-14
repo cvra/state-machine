@@ -7,7 +7,7 @@ before_install:
     - sudo pip install pyaml jinja2
     - git clone https://github.com/cpputest/cpputest ../cpputest
     - pushd ../cpputest
-    - git checkout adb0ce70a614a4dd37657409403041989c38ce4a
+    - autoreconf
     - ./configure
     - make
     - sudo make install

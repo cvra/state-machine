@@ -1,10 +1,18 @@
 #ifndef STATE_MACHINE_H_
 #define STATE_MACHINE_H_
 
-typedef struct state_machine_s state_machine_t;
+
+typedef struct state_machine_s {
+    void (*current_state)(struct state_machine_s *);
+
+    /** The context of a state machine is some user-provided pointer which can
+     * be used to store information about the state machine instance, such as
+     * the current connection if the state machine is used to implement a server
+     * for example. */
+    void *context;
+} state_machine_t;
+
 typedef void (*state_func)(state_machine_t *);
-
-
 
 /** Allocates memory for a new state machine. */
 state_machine_t *state_machine_create(void);

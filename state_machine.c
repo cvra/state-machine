@@ -1,6 +1,19 @@
 #include <stdlib.h>
 #include "state_machine.h"
 
+state_machine_t *state_machine_create(void)
+{
+    state_machine_t * machine = NULL;
+    machine=(state_machine_t*)calloc(1,sizeof(state_machine_t));
+    return machine;
+}   
+
+void state_machine_delete(state_machine_t *machine)
+{
+    free(machine);
+}
+
+
 void state_machine_set_current_state(state_machine_t *machine, state_func state)
 {
     machine->current_state = state;
